@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css"><!-- Custom CSS -->
+    <title>Document</title>
+</head>
+<body>
+    <!-- Primer Navbar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384089.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-center">
+                Instagram
+            </a>
+          <form class="d-flex" role="search">
+            <button type="button" class="btn btn-success mx-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Create a new post
+            </button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Caption:</label>
+                        <textarea class="form-control" id="message-text" placeholder="Add the caption of you post here"></textarea>
+                        <div class="d-flex mt-2">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fa-solid fa-camera"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary mx-1" type="button">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="dropdown-center">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                </ul>
+            </div>
+          </form>
+        </div>
+    </nav>
+    <!-- Navbar Tabs -->
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-table-cells fa-xl"></i></button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-square fa-xl"></i></button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <!-- Primer panel (collage)-->
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="d-flex flex-wrap">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://estaticos-cdn.elperiodico.com/clip/f5cdcdcd-2de0-4731-87c8-f418aacb2678_alta-libre-aspect-ratio_default_0.jpg" alt="DuckHunt">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://hips.hearstapps.com/hmg-prod/images/190208-delish-ramen-horizontal-093-1550096715.jpg?crop=0.8893333333333334xw:1xh;center,top&resize=1200:*" alt="Minmin">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://www.liveabout.com/thmb/HzsuWdJigJouHrUFxr_X2OpyVTg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-629725327-5c33ebd546e0fb000140ef8d.jpg" alt="Banjo">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://cdn.pixabay.com/photo/2023/09/06/08/50/tornado-8236696_1280.jpg" alt="Luigi">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://www.yates.com.au/media/plants/fruit-and-citrus/fruit-peach-image1.jpg?mode=crop&anchor=center&widthratio=1.5&height=576&format=jpg" alt="Peach">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Venezuela_Falc%C3%B3n_location_map_2.svg" alt="CapFalcon">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://d2r9epyceweg5n.cloudfront.net/stores/091/025/products/7-arlecchino-2-copia-d26cd18a929f9b1ecc15126297784267-1024-1024.jpg" alt="Joker">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://lifegodandtheuniverse.files.wordpress.com/2018/11/math-space.jpg" alt="Sephiroth">
+                <img class="img-fluid col-sm-4 p-1 object-fit-cover imagecollage" src="https://www.espectaculosbcn.com/wp-content/uploads/2023/04/comprar-cajas-de-carton-en-Barcelona-1.jpg" alt="Snake">
+            </div>
+        </div>
+        <!-- Segundo panel (individual)-->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="d-flex flex-column align-items-center justify-content-start justify-content-between">
+                <div class="card rounded-1 col-sm-5 my-2">
+                    <div class="card-body py-1 d-flex align-items-center justify-content-between">
+                        <p class="h5 my-1">Mi lindo perrito</p>
+                        <p class="h5 my-1 text-secondary">10/10</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1694930102174-d6e808bbfadf?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1926" class="card-img-top rounded-0" alt="...">
+                    <div class="card-body">
+                        <h6><b>153 Likes</b></h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card rounded-1 col-sm-5 my-2">
+                    <div class="card-body py-1 d-flex align-items-center justify-content-between">
+                        <p class="h5 my-1">Golazo de chilena, SÁCALA</p>
+                        <p class="h5 my-1 text-secondary">14/08</p>
+                    </div>
+                    <img src="https://i.pinimg.com/originals/33/17/45/331745b5440082a78c785708ca27980d.png" class="card-img-top rounded-0" alt="...">
+                    <div class="card-body">
+                        <h6><b>421 Likes</b></h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card rounded-1 col-sm-5 my-2">
+                    <div class="card-body py-1 d-flex align-items-center justify-content-between">
+                        <p class="h5 my-1">Mi mamá cocina espectacular</p>
+                        <p class="h5 my-1 text-secondary">02/07</p>
+                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2023/09/25/07/55/salad-8274421_1280.jpg" class="card-img-top rounded-0" alt="...">
+                    <div class="card-body">
+                        <h6><b>255 Likes</b></h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://kit.fontawesome.com/68c7a9ab17.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
